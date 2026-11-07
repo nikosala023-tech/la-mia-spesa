@@ -8,7 +8,23 @@ App per telefono (iOS e Android) per fare la lista della spesa senza perdere tem
 
 I dati restano sul telefono. Prezzi e porzioni sono stime medie: quando correggi un prezzo, l'app lo ricorda.
 
-## Provarla subito sul telefono (Expo Go)
+## Installarla su iPhone (consigliato)
+
+La versione per iPhone è nella cartella `docs/` ed è pubblicata con GitHub Pages:
+**https://nikosala023-tech.github.io/la-mia-spesa/**
+
+1. Apri il link con **Safari** sull'iPhone.
+2. Tocca il tasto **Condividi** (il quadrato con la freccia in su).
+3. Scegli **Aggiungi alla schermata Home**, poi **Aggiungi**.
+
+Compare l'icona "Spesa": si apre a schermo intero come le altre app e funziona anche senza campo.
+I dati restano sull'iPhone. Gli aggiornamenti arrivano da soli alla riapertura.
+
+## Versione Expo (React Native)
+
+Il resto del repository è la stessa app in Expo, utile se un giorno la si vuole pubblicare sull'App Store.
+
+### Provarla con Expo Go
 
 Serve un computer con [Node.js](https://nodejs.org) (versione 20 o più recente).
 
@@ -23,7 +39,7 @@ Serve un computer con [Node.js](https://nodejs.org) (versione 20 o più recente)
 3. Inquadra il QR code che compare: su iPhone con la Fotocamera, su Android dall'app Expo Go.
    Se telefono e computer non sono sulla stessa rete Wi-Fi usa `npx expo start --tunnel`.
 
-## Installarla come app vera (senza computer acceso)
+### Build installabile con EAS
 
 Con un account gratuito su [expo.dev](https://expo.dev):
 
@@ -39,7 +55,7 @@ Su **iPhone** l'installazione fuori da Expo Go richiede un account Apple Develop
 `eas build --profile preview --platform ios` per installarla sui tuoi dispositivi, oppure
 `eas build --platform ios` e `eas submit` per TestFlight.
 
-## Sviluppo
+### Sviluppo
 
 ```bash
 npx tsc --noEmit   # controllo dei tipi
